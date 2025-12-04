@@ -85,6 +85,7 @@ export default async function MovieDetailsPage({ params }: Props) {
               fill
               className="object-cover"
               priority
+              unoptimized
             />
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
@@ -101,6 +102,7 @@ export default async function MovieDetailsPage({ params }: Props) {
                   width={200}
                   height={300}
                   className="rounded-lg shadow-xl"
+                  unoptimized
                 />
               )}
             </div>

@@ -74,6 +74,7 @@ function HeroSlide({ item }: HeroSlideProps) {
           className="object-cover"
           priority
           data-ai-hint="movie background"
+          unoptimized
         />
       )}
       <div className="absolute inset-0 z-10 bg-gradient-to-t from-background via-background/80 to-transparent" />
@@ -89,6 +90,7 @@ function HeroSlide({ item }: HeroSlideProps) {
                 width={220}
                 height={330}
                 className="rounded-lg"
+                unoptimized
               />
             )}
           </div>

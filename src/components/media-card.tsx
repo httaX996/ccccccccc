@@ -28,6 +28,7 @@ export default function MediaCard({ item }: MediaCardProps) {
                   fill
                   className="rounded-t-lg object-cover"
                   sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
+                  unoptimized
                 />
               )}
                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />

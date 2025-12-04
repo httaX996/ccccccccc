@@ -31,6 +31,7 @@ export default function TvCard({ item }: TvCardProps) {
                   fill
                   className="rounded-t-lg object-cover"
                   sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
+                  unoptimized
                 />
               ) : (
                 <div className="w-full h-full bg-muted rounded-t-lg flex items-center justify-center">
