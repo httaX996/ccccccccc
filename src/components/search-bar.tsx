@@ -193,7 +193,7 @@ function SearchBarInternal() {
                   >
                     <div className="relative h-14 w-10 shrink-0 rounded-sm overflow-hidden bg-muted">
                         {imageUrl ? (
-                            <Image src={imageUrl} alt={title} fill className="object-cover" sizes="40px" />
+                            <Image src={imageUrl} alt={title} fill className="object-cover" sizes="40px" unoptimized />
                         ) : (
                            <div className="w-full h-full flex items-center justify-center">
                             {getSuggestionIcon(currentTab)}
