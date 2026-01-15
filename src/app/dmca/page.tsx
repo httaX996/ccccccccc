@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'DMCA Notice & Takedown Policy',
-  description: 'DMCA Notice & Takedown Policy for AniMovie. How to file a copyright infringement notice.',
+  description: 'DMCA Notice & Takedown Policy for CK CineMAX. How to file a copyright infringement notice.',
   robots: {
     index: false,
     follow: false,
@@ -31,7 +31,7 @@ export default function DMCAPage() {
               Upon valid notice, we will remove or disable access to the material.
             </p>
             <p>
-              Contact: <a href="chethminakavishan024@gmail.com" className="text-primary hover:underline">chethminakavishan024@gmail.com</a>
+              Contact: <a href="mailto:chethminakavishan024@gmail.com" className="text-primary hover:underline">chethminakavishan024@gmail.com</a>
             </p>
           </div>
           <div className="mt-12 text-center">
