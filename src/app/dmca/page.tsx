@@ -31,7 +31,7 @@ export default function DMCAPage() {
               Upon valid notice, we will remove or disable access to the material.
             </p>
             <p>
-              Contact: <a href="mailto:parthaforwork@outlook.com" className="text-primary hover:underline">parthaforwork@outlook.com</a>
+              Contact: <a href="chethminakavishan024@gmail.com" className="text-primary hover:underline">chethminakavishan024@gmail.com</a>
             </p>
           </div>
           <div className="mt-12 text-center">
