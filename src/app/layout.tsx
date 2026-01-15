@@ -26,7 +26,7 @@ function Footer() {
     <footer className="w-full border-t border-border/40 bg-background text-sm text-muted-foreground">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-8 md:flex-row">
         <div className="flex flex-col items-center gap-2 text-center md:items-start md:text-left">
-          <p>&copy; {new Date().getFullYear()} AniMovie. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} CK CineMAX. All Rights Reserved.</p>
           <p className="max-w-md text-xs">
             All media content is provided by third-party services. 
             AniMovie does not claim ownership of any anime, movies, TV shows, or manga linked or embedded on this site.
