@@ -16,7 +16,7 @@ const nunito = Nunito({
 export const metadata: Metadata = {
   title: {
     template: '%s | AniMovie',
-    default: 'AniMovie - Watch Anime, Manga & Movies Online',
+    default: 'CK CineMAX - Watch Anime, Manga & Movies Online',
   },
   description: 'Your one-stop platform for streaming the latest anime, reading popular manga, and watching movies. All for free, with sub and dub options available.',
 };
@@ -29,7 +29,10 @@ function Footer() {
           <p>&copy; {new Date().getFullYear()} CK CineMAX. All Rights Reserved.</p>
           <p className="max-w-md text-xs">
             All media content is provided by third-party services. 
-            AniMovie does not claim ownership of any anime, movies, TV shows, or manga linked or embedded on this site.
+            CK CineMAX does not claim ownership of any anime, movies, TV shows, or manga linked or embedded on this site.
+          </p>
+          <p className="max-w-md text-xs">
+            Made by CHETHMINA KAVISHAN
           </p>
         </div>
         <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
