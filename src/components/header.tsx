@@ -11,11 +11,10 @@ import { Menu } from 'lucide-react';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from './ui/sheet';
 
 const navItems = [
-  { name: 'Home', tab: 'anime' },
-  { name: 'Movies', tab: 'movies' },
-  { name: 'TV Series', tab: 'tv' },
-  { name: 'Anime', tab: 'manga' },
+  { name: 'Anime', tab: 'anime' },
   { name: 'Manga', tab: 'manga' },
+  { name: 'Movies', tab: 'movies' },
+  { name: 'TV Shows', tab: 'tv' },
 ];
 
 function HeaderNavigation({ isMobile, onLinkClick }: { isMobile?: boolean; onLinkClick?: () => void }) {
@@ -25,7 +24,7 @@ function HeaderNavigation({ isMobile, onLinkClick }: { isMobile?: boolean; onLin
 
   const getActiveTab = () => {
     if (currentQuery) {
-      return searchParams.get('tab') || 'movie';
+      return searchParams.get('tab') || 'anime';
     }
     if (pathname.startsWith('/media/anime') || pathname.startsWith('/view/anime')) {
       return 'anime';
@@ -39,7 +38,7 @@ function HeaderNavigation({ isMobile, onLinkClick }: { isMobile?: boolean; onLin
     if (pathname.startsWith('/media/tv') || pathname.startsWith('/view/tv')) {
       return 'tv';
     }
-    return searchParams.get('tab') || 'movie';
+    return searchParams.get('tab') || 'anime';
   };
 
   const currentTab = getActiveTab();
@@ -100,7 +99,7 @@ function MobileNav() {
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <Link href="/" className="flex items-center space-x-2" onClick={() => setOpen(false)}>
                 <AniMovieLogo className="h-6 w-6 text-primary" />
-                <span className="font-bold sm:inline-block">CK CineMAX</span>
+                <span className="font-bold sm:inline-block">AniMovie</span>
               </Link>
            </SheetHeader>
           <Suspense fallback={<div className="w-full h-10" />}>
@@ -119,7 +118,7 @@ export default function Header() {
         <div className="mr-4 flex items-center">
           <Link href="/" className="mr-2 flex items-center space-x-2 md:mr-6">
             <AniMovieLogo className="h-6 w-6 text-primary" />
-            <span className="hidden font-bold sm:inline-block">CK CineMAX</span>
+            <span className="hidden font-bold sm:inline-block">AniMovie</span>
           </Link>
           <Suspense fallback={<div className="w-48 h-10" />}>
             <HeaderNavigation />
