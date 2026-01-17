@@ -99,7 +99,7 @@ function MobileNav() {
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <Link href="/" className="flex items-center space-x-2" onClick={() => setOpen(false)}>
                 <AniMovieLogo className="h-6 w-6 text-primary" />
-                <span className="font-bold sm:inline-block">AniMovie</span>
+                <span className="font-bold sm:inline-block">CK CineMAX</span>
               </Link>
            </SheetHeader>
           <Suspense fallback={<div className="w-full h-10" />}>
