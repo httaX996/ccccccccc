@@ -25,7 +25,7 @@ function HeaderNavigation({ isMobile, onLinkClick }: { isMobile?: boolean; onLin
 
   const getActiveTab = () => {
     if (currentQuery) {
-      return searchParams.get('tab') || 'anime';
+      return searchParams.get('tab') || 'movie';
     }
     if (pathname.startsWith('/media/anime') || pathname.startsWith('/view/anime')) {
       return 'anime';
@@ -39,7 +39,7 @@ function HeaderNavigation({ isMobile, onLinkClick }: { isMobile?: boolean; onLin
     if (pathname.startsWith('/media/tv') || pathname.startsWith('/view/tv')) {
       return 'tv';
     }
-    return searchParams.get('tab') || 'anime';
+    return searchParams.get('tab') || 'movie';
   };
 
   const currentTab = getActiveTab();
