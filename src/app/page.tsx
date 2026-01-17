@@ -120,7 +120,7 @@ export default async function Home({
             {heroMovieItems.length > 0 && tab === 'movies' && <MovieHeroCarousel items={heroMovieItems} />}
             {heroTvItems.length > 0 && tab === 'tv' && <TvHeroCarousel items={heroTvItems} />}
             <div className="container mx-auto space-y-12 px-4 py-8 sm:px-6 lg:px-8">
-              {tab === 'movies' && (
+              {tab === 'movie' && (
                 <>
                    {trendingMovies.length > 0 && (
                     <MovieCarousel title="Trending Movies" items={trendingMovies} />
