@@ -118,7 +118,7 @@ export default function Header() {
         <div className="mr-4 flex items-center">
           <Link href="/" className="mr-2 flex items-center space-x-2 md:mr-6">
             <AniMovieLogo className="h-6 w-6 text-primary" />
-            <span className="hidden font-bold sm:inline-block">AniMovie</span>
+            <span className="hidden font-bold sm:inline-block">CK CineMAX</span>
           </Link>
           <Suspense fallback={<div className="w-48 h-10" />}>
             <HeaderNavigation />
