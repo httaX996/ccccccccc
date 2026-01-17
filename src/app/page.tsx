@@ -120,16 +120,13 @@ export default async function Home({
             {heroMovieItems.length > 0 && tab === 'movies' && <MovieHeroCarousel items={heroMovieItems} />}
             {heroTvItems.length > 0 && tab === 'tv' && <TvHeroCarousel items={heroTvItems} />}
             <div className="container mx-auto space-y-12 px-4 py-8 sm:px-6 lg:px-8">
-              {tab === 'anime' && (
+              {tab === 'movies' && (
                 <>
-                  {trendingMovies.length > 0 && (
-                    <MediaCarousel title="Trending Movies" items={trendingMovies} />
+                   {trendingMovies.length > 0 && (
+                    <MovieCarousel title="Trending Movies" items={trendingMovies} />
                   )}
-                  {trendigTv.length > 0 && (
-                    <MediaCarousel title="Trendig Series" items={trendigTv} />
-                  )}
-                  {trendigAnime.length > 0 && (
-                    <MediaCarousel title="Trendig Anime" items={trendigAnime} />
+                  {popularMovies.length > 0 && (
+                    <MovieCarousel title="Popular Movies" items={popularMovies} />
                   )}
                 </>
               )}
@@ -143,23 +140,13 @@ export default async function Home({
                   )}
                 </>
               )}
-              {tab === 'manga' && (
+              {tab === 'anime' && (
                 <>
                   {trendingAnime.length > 0 && (
                     <MediaCarousel title="Trending Anime" items={trendingAnime} />
                   )}
                   {TrendigAnime.length > 0 && (
                     <MediaCarousel title="Popular Anime" items={popularAnime} />
-                  )}
-                </>
-              )}
-              {tab === 'movies' && (
-                <>
-                   {trendingMovies.length > 0 && (
-                    <MovieCarousel title="Trending Movies" items={trendingMovies} />
-                  )}
-                  {popularMovies.length > 0 && (
-                    <MovieCarousel title="Popular Movies" items={popularMovies} />
                   )}
                 </>
               )}
