@@ -120,13 +120,13 @@ export default async function Home({
             {heroMovieItems.length > 0 && tab === 'movies' && <MovieHeroCarousel items={heroMovieItems} />}
             {heroTvItems.length > 0 && tab === 'tv' && <TvHeroCarousel items={heroTvItems} />}
             <div className="container mx-auto space-y-12 px-4 py-8 sm:px-6 lg:px-8">
-              {tab === 'movie' && (
+              {tab === 'anime' && (
                 <>
-                   {trendingMovies.length > 0 && (
-                    <MovieCarousel title="Trending Movies" items={trendingMovies} />
+                  {trendingAnime.length > 0 && (
+                    <MediaCarousel title="Trending Anime" items={trendingAnime} />
                   )}
-                  {popularMovies.length > 0 && (
-                    <MovieCarousel title="Popular Movies" items={popularMovies} />
+                  {popularAnime.length > 0 && (
+                    <MediaCarousel title="Popular Anime" items={popularAnime} />
                   )}
                 </>
               )}
@@ -140,23 +140,23 @@ export default async function Home({
                   )}
                 </>
               )}
-              {tab === 'anime' && (
+              {tab === 'movies' && (
                 <>
-                  {trendingAnime.length > 0 && (
-                    <MediaCarousel title="Trending Anime" items={trendingAnime} />
+                   {trendingMovies.length > 0 && (
+                    <MovieCarousel title="Trending Movies" items={trendingMovies} />
                   )}
-                  {TrendigAnime.length > 0 && (
-                    <MediaCarousel title="Popular Anime" items={popularAnime} />
+                  {popularMovies.length > 0 && (
+                    <MovieCarousel title="Popular Movies" items={popularMovies} />
                   )}
                 </>
               )}
                {tab === 'tv' && (
                 <>
                    {trendingTv.length > 0 && (
-                    <TvCarousel title="Trending Series" items={trendingTv} />
+                    <TvCarousel title="Trending TV Shows" items={trendingTv} />
                   )}
                   {popularTv.length > 0 && (
-                    <TvCarousel title="Popular Series" items={popularTv} />
+                    <TvCarousel title="Popular TV Shows" items={popularTv} />
                   )}
                 </>
               )}
