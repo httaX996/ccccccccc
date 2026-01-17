@@ -11,7 +11,7 @@ import { Menu } from 'lucide-react';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from './ui/sheet';
 
 const navItems = [
-  { name: 'Home', tab: 'movies' },
+  { name: 'Home', tab: 'home' },
   { name: 'Movies', tab: 'movies' },
   { name: 'TV Series', tab: 'tv' },
   { name: 'Anime', tab: 'anime' },
@@ -26,6 +26,9 @@ function HeaderNavigation({ isMobile, onLinkClick }: { isMobile?: boolean; onLin
   const getActiveTab = () => {
     if (currentQuery) {
       return searchParams.get('tab') || 'movie';
+    }
+    if (pathname.startsWith('/media/home') || pathname.startsWith('/view/home')) {
+      return 'home';
     }
     if (pathname.startsWith('/media/anime') || pathname.startsWith('/view/anime')) {
       return 'anime';
