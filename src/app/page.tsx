@@ -140,6 +140,22 @@ export default async function Home({
                   )}
                 </>
               )}
+              {tab === 'home' && (
+                <>
+                   {trendingMovies.length > 0 && (
+                    <MovieCarousel title="Trending Movies" items={trendingMovies} />
+                  )}
+                  {popularMovies.length > 0 && (
+                    <MovieCarousel title="Trendig Series" items={TrendigTv} />
+                  )}
+                  {trendingAnime.length > 0 && (
+                    <MediaCarousel title="Trending Anime" items={trendingAnime} />
+                  )}
+                  {trendingManga.length > 0 && (
+                    <MediaCarousel title="Trending Manga" items={trendingManga} />
+                  )}
+                </>
+              )}
               {tab === 'movies' && (
                 <>
                    {trendingMovies.length > 0 && (
@@ -148,18 +164,15 @@ export default async function Home({
                   {popularMovies.length > 0 && (
                     <MovieCarousel title="Popular Movies" items={popularMovies} />
                   )}
-                  {popularMovies.length > 0 && (
-                    <MovieCarousel title="ALL Time Movies" items={popularMovies} />
-                  )}
                 </>
               )}
                {tab === 'tv' && (
                 <>
                    {trendingTv.length > 0 && (
-                    <TvCarousel title="Trending TV Shows" items={trendingTv} />
+                    <TvCarousel title="Trending Series" items={trendingTv} />
                   )}
                   {popularTv.length > 0 && (
-                    <TvCarousel title="Popular TV Shows" items={popularTv} />
+                    <TvCarousel title="Popular Series" items={popularTv} />
                   )}
                 </>
               )}
