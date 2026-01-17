@@ -148,6 +148,9 @@ export default async function Home({
                   {popularMovies.length > 0 && (
                     <MovieCarousel title="Popular Movies" items={popularMovies} />
                   )}
+                  {popularMovies.length > 0 && (
+                    <MovieCarousel title="ALL Time Movies" items={popularMovies} />
+                  )}
                 </>
               )}
                {tab === 'tv' && (
