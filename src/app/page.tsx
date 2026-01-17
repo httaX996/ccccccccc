@@ -40,14 +40,14 @@ export default async function Home({
 
   try {
     if (query) {
-      if (tab === 'anime') {
+      if (tab === 'movies') {
+        movieSearchResults = await fetchFromTMDB('/search/movie', { query });
+      } else if (tab === 'tv') {
+        tvSearchResults = await fetchFromTMDB('/search/tv', { query });  
+      } else if (tab === 'anime') {
         animeSearchResults = await fetchFromAniList({ search: query, type: 'ANIME', sort: ['SEARCH_MATCH'], perPage: 40 });
       } else if (tab === 'manga') {
         mangaSearchResults = await fetchFromAniList({ search: query, type: 'MANGA', sort: ['SEARCH_MATCH'], perPage: 40 });
-      } else if (tab === 'movies') {
-        movieSearchResults = await fetchFromTMDB('/search/movie', { query });
-      } else if (tab === 'tv') {
-        tvSearchResults = await fetchFromTMDB('/search/tv', { query });
       }
     } else {
       [trendingAnime, popularAnime, trendingManga, popularManga, trendingMovies, popularMovies, trendingTv, popularTv] = await Promise.all([
@@ -115,31 +115,11 @@ export default async function Home({
           </div>
         ) : (
           <>
-            {heroAnimeItems.length > 0 && tab === 'anime' && <HeroCarousel items={heroAnimeItems} />}
-            {heroMangaItems.length > 0 && tab === 'manga' && <HeroCarousel items={heroMangaItems} />}
-            {heroMovieItems.length > 0 && tab === 'movies' && <MovieHeroCarousel items={heroMovieItems} />}
-            {heroTvItems.length > 0 && tab === 'tv' && <TvHeroCarousel items={heroTvItems} />}
+            {heroMovieItems.length > 0 && tab === 'movies' && <HeroCarousel items={heroMovieItems} />}
+            {heroTvItems.length > 0 && tab === 'tv' && <HeroCarousel items={heroTvItems} />}
+            {heroAnimeItems.length > 0 && tab === 'anime' && <MovieHeroCarousel items={heroAnimeItems} />}
+            {heroMangaItems.length > 0 && tab === 'manga' && <TvHeroCarousel items={heroMangaItems} />}
             <div className="container mx-auto space-y-12 px-4 py-8 sm:px-6 lg:px-8">
-              {tab === 'anime' && (
-                <>
-                  {trendingAnime.length > 0 && (
-                    <MediaCarousel title="Trending Anime" items={trendingAnime} />
-                  )}
-                  {popularAnime.length > 0 && (
-                    <MediaCarousel title="Popular Anime" items={popularAnime} />
-                  )}
-                </>
-              )}
-               {tab === 'manga' && (
-                <>
-                  {trendingManga.length > 0 && (
-                    <MediaCarousel title="Trending Manga" items={trendingManga} />
-                  )}
-                  {popularManga.length > 0 && (
-                    <MediaCarousel title="Popular Manga" items={popularManga} />
-                  )}
-                </>
-              )}
               {tab === 'movies' && (
                 <>
                    {trendingMovies.length > 0 && (
@@ -160,6 +140,26 @@ export default async function Home({
                   )}
                 </>
               )}
+              {tab === 'anime' && (
+                <>
+                  {trendingAnime.length > 0 && (
+                    <MediaCarousel title="Trending Anime" items={trendingAnime} />
+                  )}
+                  {popularAnime.length > 0 && (
+                    <MediaCarousel title="Popular Anime" items={popularAnime} />
+                  )}
+                </>
+              )}
+               {tab === 'manga' && (
+                <>
+                  {trendingManga.length > 0 && (
+                    <MediaCarousel title="Trending Manga" items={trendingManga} />
+                  )}
+                  {popularManga.length > 0 && (
+                    <MediaCarousel title="Popular Manga" items={popularManga} />
+                  )}
+                </>
+              )} 
             </div>
           </>
         )}
