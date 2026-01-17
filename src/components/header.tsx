@@ -11,10 +11,11 @@ import { Menu } from 'lucide-react';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from './ui/sheet';
 
 const navItems = [
-  { name: 'Home', tab: 'manga' },
+  { name: 'Home', tab: 'anime' },
   { name: 'Movies', tab: 'movies' },
   { name: 'TV Series', tab: 'tv' },
-  { name: 'Anime', tab: 'anime' },
+  { name: 'Anime', tab: 'manga' },
+  { name: 'Manga', tab: 'manga' },
 ];
 
 function HeaderNavigation({ isMobile, onLinkClick }: { isMobile?: boolean; onLinkClick?: () => void }) {
