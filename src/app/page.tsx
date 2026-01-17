@@ -122,11 +122,14 @@ export default async function Home({
             <div className="container mx-auto space-y-12 px-4 py-8 sm:px-6 lg:px-8">
               {tab === 'anime' && (
                 <>
-                  {trendingAnime.length > 0 && (
-                    <MediaCarousel title="Trending Anime" items={trendingAnime} />
+                  {trendingMovies.length > 0 && (
+                    <MediaCarousel title="Trending Movies" items={trendingMovies} />
                   )}
-                  {popularAnime.length > 0 && (
-                    <MediaCarousel title="Popular Anime" items={popularAnime} />
+                  {trendigTv.length > 0 && (
+                    <MediaCarousel title="Trendig Series" items={trendigTv} />
+                  )}
+                  {trendigAnime.length > 0 && (
+                    <MediaCarousel title="Trendig Anime" items={trendigAnime} />
                   )}
                 </>
               )}
@@ -140,19 +143,13 @@ export default async function Home({
                   )}
                 </>
               )}
-              {tab === 'home' && (
+              {tab === 'manga' && (
                 <>
-                   {trendingMovies.length > 0 && (
-                    <MovieCarousel title="Trending Movies" items={trendingMovies} />
-                  )}
-                  {popularMovies.length > 0 && (
-                    <MovieCarousel title="Trendig Series" items={trendigTv} />
-                  )}
                   {trendingAnime.length > 0 && (
                     <MediaCarousel title="Trending Anime" items={trendingAnime} />
                   )}
-                  {trendingManga.length > 0 && (
-                    <MediaCarousel title="Trending Manga" items={trendingManga} />
+                  {TrendigAnime.length > 0 && (
+                    <MediaCarousel title="Popular Anime" items={popularAnime} />
                   )}
                 </>
               )}
