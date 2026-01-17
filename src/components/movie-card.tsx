@@ -47,11 +47,11 @@ export default function MovieCard({ item }: MovieCardProps) {
           </Link>
           <div className="p-3 space-y-2">
             <Link href={movieUrl}>
-              <h3 className="truncate font-semibold text-foreground hover:text-primary transition-colors">{title}</h3>
+              <h3 className="truncate font-semibold text-foreground hover:text-primary transition-colors">🎬 {title}</h3>
             </Link>
             <div className="text-xs text-muted-foreground flex items-center gap-2">
-              <span>{year}</span>
-              {item.vote_average > 0 && <><span>&bull;</span><span>{item.vote_average.toFixed(1)} ★</span></>}
+              <span>📆 {year}</span>
+              ⭐ {item.vote_average > 0 && <><span>&bull;</span><span>{item.vote_average.toFixed(1)}</span></>}
             </div>
              <div className="pt-1">
                <Button asChild size="sm" className="w-full">
