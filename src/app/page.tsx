@@ -146,7 +146,7 @@ export default async function Home({
                     <MovieCarousel title="Trending Movies" items={trendingMovies} />
                   )}
                   {popularMovies.length > 0 && (
-                    <MovieCarousel title="Trendig Series" items={TrendigTv} />
+                    <MovieCarousel title="Trendig Series" items={trendigTv} />
                   )}
                   {trendingAnime.length > 0 && (
                     <MediaCarousel title="Trending Anime" items={trendingAnime} />
