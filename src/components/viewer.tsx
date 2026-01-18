@@ -36,10 +36,10 @@ const getIframeSrc = (type: 'anime' | 'manga' | 'movie' | 'tv', mediaId: number 
     return `https://vidsrc.icu/embed/manga/${mediaId}/${itemNumber}`;
   }
   if (type === 'movie') {
-    return `https://vidsrc.icu/embed/movie/${mediaId}`;
+    return `https://vidfast.pro/movie/${mediaId}`;
   }
   if (type === 'tv') {
-    return `https://vidsrc.icu/embed/tv/${mediaId}/${seasonNumber}/${itemNumber}`;
+    return `https://vidfast.pro/tv/${mediaId}/${seasonNumber}/${itemNumber}`;
   }
   return '';
 };
