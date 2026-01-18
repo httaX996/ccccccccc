@@ -46,8 +46,6 @@ export default async function Home({
         mangaSearchResults = await fetchFromAniList({ search: query, type: 'MANGA', sort: ['SEARCH_MATCH'], perPage: 40 });
       } else if (tab === 'movies') {
         movieSearchResults = await fetchFromTMDB('/search/movie', { query });
-      } else if (tab === 'home') {
-        movieSearchResults = await fetchFromTMDB('/search/movie', { query });
       } else if (tab === 'tv') {
         tvSearchResults = await fetchFromTMDB('/search/tv', { query });
       }
@@ -120,19 +118,8 @@ export default async function Home({
             {heroAnimeItems.length > 0 && tab === 'anime' && <HeroCarousel items={heroAnimeItems} />}
             {heroMangaItems.length > 0 && tab === 'manga' && <HeroCarousel items={heroMangaItems} />}
             {heroMovieItems.length > 0 && tab === 'movies' && <MovieHeroCarousel items={heroMovieItems} />}
-            {heroMovieItems.length > 0 && tab === 'home' && <MovieHeroCarousel items={heroMovieItems} />}
             {heroTvItems.length > 0 && tab === 'tv' && <TvHeroCarousel items={heroTvItems} />}
             <div className="container mx-auto space-y-12 px-4 py-8 sm:px-6 lg:px-8">
-              {tab === 'home' && (
-                <>
-                  {trendingMovies.length > 0 && (
-                    <MediaCarousel title="Trending Movies" items={trendingMovies} />
-                  )}
-                  {popularAnime.length > 0 && (
-                    <MediaCarousel title="Popular Movies" items={popularMovies} />
-                  )}
-                </>
-              )}
               {tab === 'anime' && (
                 <>
                   {trendingAnime.length > 0 && (
@@ -140,6 +127,9 @@ export default async function Home({
                   )}
                   {popularAnime.length > 0 && (
                     <MediaCarousel title="Popular Anime" items={popularAnime} />
+                  )}
+                  {trendingMovies.length > 0 && (
+                    <MovieCarousel title="Trending Movies" items={trendingMovies} />
                   )}
                 </>
               )}
