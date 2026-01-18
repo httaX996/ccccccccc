@@ -41,9 +41,9 @@ export default async function Home({
   try {
     if (query) {
       if (tab === 'anime') {
-        animeSearchResults = await fetchFromAniList({ search: query, type: 'ANIME', sort: ['SEARCH_MATCH'], perPage: 40 });
+        movieSearchResults = await fetchFromTMDB('/search/movie', { query });
       } else if (tab === 'manga') {
-        mangaSearchResults = await fetchFromAniList({ search: query, type: 'MANGA', sort: ['SEARCH_MATCH'], perPage: 40 });
+        animeSearchResults = await fetchFromAniList({ search: query, type: 'ANIME', sort: ['SEARCH_MATCH'], perPage: 40 });
       } else if (tab === 'movies') {
         movieSearchResults = await fetchFromTMDB('/search/movie', { query });
       } else if (tab === 'tv') {
